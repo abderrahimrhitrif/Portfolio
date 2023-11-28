@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence, LayoutGroup } from 'framer-motion'
 import './index.css';
 import 'intersection-observer';
 import mongdb from './assets/mongodb.png';
@@ -19,7 +18,7 @@ import gmail from './assets/gmail.png';
 
 
 
-import classNames from 'classnames';
+
 
 
 function Index() {
@@ -31,7 +30,7 @@ function Index() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const apiUrl = 'http://localhost:4000'
+  const apiUrl = 'https://rhitrif-api.vercel.app'
   
   
 

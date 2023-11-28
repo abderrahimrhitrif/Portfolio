@@ -125,9 +125,14 @@ nav::before{
   
 }
 
+.submit-button:disabled{
+  background: gray !important;
+  cursor: not-allowed;
+}
+
+
 
 .cv-button{
-
     display: block;
     text-align: center;
     text-decoration: none;
@@ -137,9 +142,9 @@ nav::before{
     padding: 0.5rem 2em;
     
     border-radius: 5px;
-    background-size: 200% auto;
+    background-size: 200% auto !important;
     color: white;
-    background-image: linear-gradient(to right, #00e6d6 0%, #04c0b3 30% ,#be90ce  50%, #04c0b3 70%, #04c0b3 100%);
+    background-image: linear-gradient(to right, #00e6d6 0%, #04c0b3 30% ,#be90ce  50%, #04c0b3 70%, #04c0b3 100%) !important;
     transition: all 0.5s;
 }
 .cv-button:hover {
@@ -401,12 +406,12 @@ section{
   height: 400px;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: start;
+  justify-content: center;
+  margin-top: 5rem;
   max-width: fit-content;
   @media screen and (max-width: 720px) {
     flex-direction: column;
     height: 100%;
-    padding-top: 2rem;
   }
 }
 
@@ -575,10 +580,6 @@ input:checked + label .description {
 
 }
 
-.submit-button:disabled{
-  background: gray;
-  cursor: not-allowed;
-}
 
 /* observer animations -----------------------------------------------------------------------*/
 .hide {

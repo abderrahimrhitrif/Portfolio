@@ -11,6 +11,7 @@ import firebase from './assets/firebase.png';
 import github from './assets/github.png';
 import linkedin from './assets/linkedin.png';
 import gmail from './assets/gmail.png';
+import loader from './assets/loader.gif';
 
 
 
@@ -30,6 +31,8 @@ function Index() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
   const apiUrl = 'https://rhitrif-api.vercel.app'
   
   
@@ -208,6 +211,8 @@ function Index() {
     
     
     try {
+      setIsLoading(true);
+
       const response = await fetch(`${apiUrl}/submit`, {
         method: 'POST',
         body: JSON.stringify({ email, subject, message }),
@@ -231,9 +236,10 @@ function Index() {
       console.error('Error:', error);
       
     } finally {
-      
+      setIsLoading(false);
     }
   }
+ 
 
   return (
     <>
@@ -364,7 +370,8 @@ function Index() {
             <input type="text" className='contact-input slide' placeholder='E-mail' onChange={(e) => handleEmailChange(e)} value={email}/>
             <input type="text" className='contact-input slide' placeholder='Subject' onChange={(e) => handleSubjectChange(e)}  value={subject}/>
             <textarea className='contact-input slide' placeholder='Body' onChange={(e) => handleMessageChange(e)} value={message}></textarea>
-            <button type="submit" className='cv-button slide submit-button' disabled={!isFormValid()}><i class="fa-regular fa-paper-plane"></i></button>
+            {isLoading && <img src={loader} className='max-w-[40px]' alt="" /> }<button type="submit" className={isLoading ? 'hidden' : 'cv-button slide submit-button'} disabled={!isFormValid()}><i class="fa-regular fa-paper-plane"></i></button>
+            
           </form>
           <div className='lg:ms-7 hide text-2xl flex-col align-center justify-center text-gray-300 cursor-pointer max-w-[300px]'>
             <div className='slide pb-5'>Would you like to hire me or work with me? Full free to contact me via this form or via the following :</div>
@@ -376,6 +383,7 @@ function Index() {
         </section>
       </div>
       <div className="blob" ref={blob}></div>
+      
     </>
 
   );

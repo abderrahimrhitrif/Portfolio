@@ -580,6 +580,11 @@ input:checked + label .description {
 
 }
 
+.loader{
+  top:0;
+  left: 0;
+}
+
 
 /* observer animations -----------------------------------------------------------------------*/
 .hide {

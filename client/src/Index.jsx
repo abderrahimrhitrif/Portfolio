@@ -247,7 +247,7 @@ function Index() {
         <nav className='flex px-9 py-3 space-between absolute '>
           <div className="stroke" ref={stroke}></div>
           <div className="logo cursor-pointer text-3xl" onMouseOver={(e) => handleLogoChange(e)}>A.Rhitrif</div>
-          <button className='cv-button'>Download My Resume</button>
+          <a href='https://azure-carlen-27.tiiny.site/' target='_blank'><button className='cv-button'>Download My Resume</button></a>
         </nav>
         <section className='flex justify-center items-center pt-8 hide'>
           <div className="relative cursor-default" >
@@ -374,7 +374,7 @@ function Index() {
             
           </form>
           <div className='lg:ms-7 hide text-2xl flex-col align-center justify-center text-gray-300 cursor-pointer max-w-[300px]'>
-            <div className='slide pb-5'>Would you like to hire me or work with me? Full free to contact me via this form or via the following :</div>
+            <div className='slide pb-5'>Would you like to hire me or work with me? Feel free to contact me via this form or via the following :</div>
             <div className='slide pb-5'><i class="fa-regular fa-envelope pe-2"></i><span className='me'>rhitrif.abderrahim@gmail.com</span></div>
             <div className='slide pb-5'><i class="fa-solid fa-phone pe-2"></i><span className='me'>+212 713 779 788</span></div>
             <div className='slide pb-5'><i class="fa-brands fa-linkedin pe-2"></i><a href="https://www.linkedin.com/in/abderrahim-rhitrif/" target="_blank" className='me'>/in/abderrahim-rhitrif</a><a/></div>

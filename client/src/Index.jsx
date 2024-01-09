@@ -247,7 +247,7 @@ function Index() {
         <nav className='flex px-9 py-3 space-between absolute '>
           <div className="stroke" ref={stroke}></div>
           <div className="logo cursor-pointer text-3xl" onMouseOver={(e) => handleLogoChange(e)}>A.Rhitrif</div>
-          <a href='https://azure-carlen-27.tiiny.site/' target='_blank'><button className='cv-button'>Download My Resume</button></a>
+          <a href='https://www.overleaf.com/download/project/6570d17eface041ff709b42c/build/18ceeced675-d59e47e111f06b75/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-n2d-c-f-4wfz&enable_pdf_caching=true' target='_blank'><button className='cv-button'>Download My Resume</button></a>
         </nav>
         <section className='flex justify-center items-center pt-8 hide'>
           <div className="relative cursor-default" >
@@ -327,6 +327,29 @@ function Index() {
 
 
         </section>
+        <section className='flex items-center lg:ps-[15%] lg:pe-[15%] relative'>
+          <div className='projects absolute lg:text-7xl slide'>Professional Experience</div>
+          <div className="container hide">
+            <div>
+              <div className='text-2xl'>► Full Stack Engineer Internship | Society Of Scholars</div>
+              <div className='ps-8'>September 2023 - Now</div>
+              <div className='ps-8 pt-5 text-xl'>• Spearheaded a 32% increase in donation system conversions by transitioning from PayPal to Stripe, elevating user satisfaction and confidence</div>
+              <div className='ps-8 text-xl'>• Implemented an AI chat system, boosting user retention by 25% and extending average browsing time by 31%, enhancing real-time engagement on the website</div>
+              <div className='ps-8 text-xl'>• Optimized website performance by replacing an external animation library with plain JavaScript, resulting in a remarkable 2200ms reduction in loading times</div>
+              <div className='text-2xl'>► Assistant Software Developer | Ibn Zohr University</div>
+              <div className='ps-8'>January 2023 - July 2023</div>
+              <div className='ps-8 pt-5 text-xl'>• Transformed lab storage software by migrating from HTML, CSS, and jQuery to Angular 13, enhancing overall user and developer experience</div>
+              <div className='ps-8 text-xl'>• Innovated by converting the software into a native application using Electron, providing users with a seamless and efficient desktop application</div>
+              <div className='ps-8 text-xl'>• Achieved a significant improvement in system reliability by transitioning to a serverless architecture with Firebase, increasing uptimes from 68% to 99.9%</div>
+
+            </div>
+            
+
+
+          </div>
+
+        </section>
+        
         <section className='flex items-center justify-center relative'>
           <div className='projects absolute text-7xl slide'>Projects</div>
           <div className="container hide">
